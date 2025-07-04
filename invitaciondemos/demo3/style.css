@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('fiesta.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  filter: brightness(0.6);
+}
+
+#start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: #ffd700;
+  cursor: pointer;
+  transition: opacity 1s ease;
+}
+
+#start-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-frame {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.invitation-text {
+  font-family: 'Arial', sans-serif;
+  color: #ffd700;
+  text-shadow: 1px 1px 4px #000;
+  font-size: 2em;
+}
+
+.invitation-button {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.btn {
+  background: linear-gradient(45deg, #ffbb00, #ff8800);
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #ffc533, #ff9933);
+}
+
+.info-extra {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0, 0,

@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Elegante';
+  src: url('fonts/Elegante.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Elegante', Arial, sans-serif;
+  text-align: center;
+  color: #fa0101;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('fiesta.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  filter: brightness(0.6);
+}
+
+#start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 1s ease;
+}
+
+#start-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-frame {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.0);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.invitation-text {
+  font-family: 'Elegante', Arial, sans-serif;
+  color: #ca0606;
+  text-shadow: 1px 1px 4px #000;
+  font-size: 3.5em;
+}
+
+.invitation-button {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.btn {
+  background: linear-gradient(45deg, #d40000, #8b0000);
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #f7f7f7, #cc0d0d);
+}
+
+.info-extra {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+/* Aplicar Arial solo dentro de la sección del mapa y dirección */
+.info-extra, .info-extra * {
+  font-family: Arial, sans-serif !important;
+  color: #fff;
+}
+
+.map-container {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .invitation-text {
+    font-size: 1.5em;
+  }
+
+  .invitation-button {
+    font-size: 1.3em;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.corner-image {
+  position: fixed;
+  width: 320px;
+  height: auto;
+  z-index: -3; /* Ahora están detrás de todo */
+  pointer-events: none;
+}
+
+
+/* Esquina superior izquierda */
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+/* Esquina inferior derecha */
+.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+
+/* Adaptativo para pantallas pequeñas */
+@media (max-width: 600px) {
+  .corner-image {
+    width: 200px;
+  }
+}
+
+
+/*carousel fotos*/
+.gallery-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.carousel-frame {
+  position: relative;
+  display: inline-block;
+  background: url('marco.jpg') no-repeat center center / cover;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 90%;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(221, 15, 15, 0.8);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 600px) {
+  .carousel-frame {
+    padding: 15px;
+  }
+}

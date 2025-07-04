@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Invitación XV años</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Imágenes decorativas fijas -->
+<img src="up.png" alt="Decoración superior izquierda" class="corner-image top-left">
+<img src="down.png" alt="Decoración inferior derecha" class="corner-image bottom-right">
+
+<body>
+  <br>
+  <br>
+  <br>
+  <!-- Overlay de inicio -->
+  <div id="start-overlay">
+    Toca para ver la magia
+  </div>
+
+  <!-- Música de fondo -->
+  <audio id="bg-music" src="Track5.mp3" loop></audio>
+
+  <!-- Fondo general -->
+  <div class="background-image"></div>
+
+
+  <div class="page-frame">
+    <div class="container">
+      <h2 class="invitation-text fade-in">Estás invitado mis XV años</h2>
+      <h1 class="invitation-text fade-in">Mariana</h1>
+        <!--Carousel de fotos-->
+  <div class="gallery-container">
+  <div class="carousel-frame">
+    <img src="1.jpg" class="carousel-image active" alt="Imagen 1">
+    <img src="2.jpg" class="carousel-image" alt="Imagen 2">
+    <img src="3.jpg" class="carousel-image" alt="Imagen 3">
+    <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+    <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+  </div>
+</div>
+
+      <p class="invitation-text fade-in">24 de Mayo a las 20:00hrs</p>
+
+
+      <button class="btn invitation-button" onclick="confirmarAsistencia(this)">Confirmar asistencia</button>
+    </div>
+
+      <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+    <div class="info-extra">
+      <h2 class="invitation-text fade-in">📍 Ubicación:</h2>
+      <p class="invitation-text fade-in">Salon Ceremonial</p>
+      <p class="invitation-text fade-in">Calle 3, #152</p>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.521216106858!2d-99.28385638957977!3d19.605002435076987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21bf852c89d8f%3A0x41b4a117d2c09ffa!2sC.%20Verderones%2022%2C%20Granjas%20Guadalupe!5e0!3m2!1ses-419!2smx!4v1745690076403"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
