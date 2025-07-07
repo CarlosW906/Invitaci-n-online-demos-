@@ -11,6 +11,7 @@ body {
   text-align: center;
   color: #fa0101;
   position: relative;
+  background-color: #ffffff !important;  /* Forzar blanco */
   overflow-x: hidden;
 }
 
